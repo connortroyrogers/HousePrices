@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.1 (1/10/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
+
+\usepackage[english]{babel} % Specify a different language here - english by default
+
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+\hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=color2,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Introduction to Data Analysis  and Mining 2022} % Journal information
+\Archive{} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{Semester Project} % Article title
+
+\Authors{Connor Rogers\textsuperscript{1}*} % Authors
+\affiliation{\textsuperscript{1}\textit{Computer Science, School of Informatics , Computing and Engineering, Indiana University, Bloomington, IN, USA}} % Author affiliation
+
+
+\Keywords{Keyword1 --- Keyword2 --- Keyword3} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{Include abstract here -- A summary of your work}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+
+\maketitle % Print the title and abstract box
+
+\tableofcontents % Print the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+
+
+
+%----------------------------------------------------------------------------------------
+%Problem and Data Description
+%----------------------------------------------------------------------------------------
+
+
+\section{Problem and Data Description} % The \section*{} command stops section numbering
+
+
+The data provided is information about houses, and the market prices of said houses. The problem provided is needing to predict the pricing of houses based on the information provided from the data
+
+\bigskip
+\bigskip
+
+%----------------------------------------------------------------------------------------
+%	Data Preprocessing $\&$ Exploratory Data Analysis
+%----------------------------------------------------------------------------------------
+
+\section{Data Preprocessing $\&$ Exploratory Data Analysis} % The \section*{} command stops section numbering
+
+
+\subsection{Handling Missing Values}
+We replaced missing data with the line houseData[is.na(houseData)] = 0 for the moment. If we deem it to be more useful, we may replace this with the mean or median value of the columns.
+\subsection{Exploratory Data Analysis}
+summary(houseData)
+dim(houseData)
+[1] 1460   81
+colnames(houseData)
+head(houseData)
+
+\bigskip
+\bigskip
+%----------------------------------------------------------------------------------------
+ % Algorithm and Methodology
+%----------------------------------------------------------------------------------------
+
+
+\section{Algorithm and Methodology}
+
+
+For this data we looked at the different chart plots to see the different groups variables within the data set. We also implemented a chart to list the different passenger attributes within the
+data set. This will give us a general idea on what to look for in the project within the following days. 
+We intend on using the Multinomial Regression to analyze the connection between variables, such as coefficients, standard errors, and deviance
+
+
+\bigskip
+\bigskip
+%----------------------------------------------------------------------------------------
+ % Experiments and Results
+%----------------------------------------------------------------------------------------
+\section{Experiments and Results}
+
+
+\bigskip
+\bigskip
+%----------------------------------------------------------------------------------------
+ % Summary and Conclusions
+%----------------------------------------------------------------------------------------
+\section{Summary and Conclusions}
+\bigskip
+\bigskip
+\bigskip
+
+
+
+\phantomsection
+\section*{Acknowledgments} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
+
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+\phantomsection
+\bibliographystyle{unsrt}
+\bibliography{sample}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
